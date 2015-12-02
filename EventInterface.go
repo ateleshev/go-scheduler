@@ -1,10 +1,8 @@
 package scheduler
 
-import (
-	"time"
-)
+import "time"
 
-type IEvent interface {
+type EventInterface interface {
 	Name() string
 	Duration() time.Duration
 	Execute()

@@ -24,7 +24,7 @@ func NewSingleEvent(name string, duration time.Duration, action Action) *Event {
 } // }}}
 
 type Event struct {
-	IEvent
+	EventInterface
 	sync.RWMutex
 
 	name     string

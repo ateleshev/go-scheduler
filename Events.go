@@ -1,20 +1,18 @@
 package scheduler
 
-import (
-	"sync"
-)
-
-type Events struct {
-	sync.RWMutex
-
-	data map[string]*Event
-}
+import "sync"
 
 func NewEvents() *Events { // {{{
 	return &Events{
 		data: make(map[string]*Event, 0),
 	}
 } // }}}
+
+type Events struct {
+	sync.RWMutex
+
+	data map[string]*Event
+}
 
 func (this *Events) Len() int { // {{{
 	return len(this.data)

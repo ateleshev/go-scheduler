@@ -8,7 +8,7 @@ func NewScheduler(name string) *Scheduler { // {{{
 } // }}}
 
 type Scheduler struct {
-	IScheduler
+	SchedulerInterface
 
 	name   string
 	events *Events

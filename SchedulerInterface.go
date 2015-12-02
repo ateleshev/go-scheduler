@@ -1,6 +1,6 @@
 package scheduler
 
-type IScheduler interface {
+type SchedulerInterface interface {
 	Name() string
 
 	Set(event *Event)
